@@ -1,0 +1,28 @@
+/*Dev: Aswani Tewari*/
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+mat-sidenav {
+  width: 200px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-icon, .menu-title{
+	vertical-align: middle;
+}
+
+.demo-tab-content {
+  padding: 16px;
+}
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+  min-width: 500px;
+  border: 1px solid gray;
+}

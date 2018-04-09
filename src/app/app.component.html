@@ -1,20 +1,306 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- Dev: Aswani Tewari -->
+<mat-sidenav-container class="example-container mat-drawer-container mat-sidenav-container mat-drawer-transition">
+  <mat-sidenav #sidenav mode="side" opened="opened" class="sidenav mat-elevation-z6 mat-drawer mat-sidenav">
+    <mat-toolbar class="sidenav-header mat-toolbar mat-primary mat-toolbar-single-row" color="primary">
+      <mat-toolbar-row>
+        <span>Turbo ERP</span>
+        <span class="example-spacer"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <p>
+      <mat-nav-list>
+        <mat-list-item>
+          <a matLine href="#" class=" active-link">
+            <span class="mat-button-wrapper">
+              <mat-icon class="menu-icon mat-icon material-icons" role="img" aria-hidden="true">supervisor_account</mat-icon>
+              <span class="menu-title">Master</span>
+            </span>
+          </a>
+          <button mat-icon-button (click)="showInfo(link)">
+          </button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <a matLine href="#" clas>
+            <span class="mat-button-wrapper">
+              <mat-icon class="menu-icon mat-icon material-icons" role="img" aria-hidden="true">account_circle</mat-icon>
+              <span class="menu-title">Vendor</span>
+            </span>
+          </a>
+          <button mat-icon-button (click)="showInfo(link)">
+          </button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item >
+         <a matLine href="#">
+          <span class="mat-button-wrapper">
+            <mat-icon class="menu-icon mat-icon material-icons" role="img" aria-hidden="true">account_box</mat-icon>
+            <span class="menu-title">Buyer</span>
+          </span>
+        </a>
+        <button mat-icon-button (click)="showInfo(link)">
+        </button>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item >
+         <a matLine href="#">
+          <span class="mat-button-wrapper">
+            <mat-icon class="menu-icon mat-icon material-icons" role="img" aria-hidden="true">account_box</mat-icon>
+            <span class="menu-title">Vendor</span>
+          </span>
+        </a>
+        <button mat-icon-button (click)="showInfo(link)">
+        </button>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item >
+         <a matLine href="#">
+          <span class="mat-button-wrapper">
+            <mat-icon class="menu-icon mat-icon material-icons" role="img" aria-hidden="true">account_box</mat-icon>
+            <span class="menu-title">Buying Agent</span>
+          </span>
+        </a>
+        <button mat-icon-button (click)="showInfo(link)">
+        </button>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item >
+         <a matLine href="#">
+          <span class="mat-button-wrapper">
+            <mat-icon class="menu-icon mat-icon material-icons" role="img" aria-hidden="true">account_box</mat-icon>
+            <span class="menu-title">Sales Coordinator</span>
+          </span>
+        </a>
+        <button mat-icon-button (click)="showInfo(link)">
+        </button>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item >
+         <a matLine href="#">
+          <span class="mat-button-wrapper">
+            <mat-icon class="menu-icon mat-icon material-icons" role="img" aria-hidden="true">account_box</mat-icon>
+            <span class="menu-title">Other Party</span>
+          </span>
+        </a>
+        <button mat-icon-button (click)="showInfo(link)">
+        </button>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item >
+         <a matLine href="#">
+          <span class="mat-button-wrapper">
+            <mat-icon class="menu-icon mat-icon material-icons" role="img" aria-hidden="true">account_box</mat-icon>
+            <span class="menu-title">Item Group</span>
+          </span>
+        </a>
+        <button mat-icon-button (click)="showInfo(link)">
+        </button>
+      </mat-list-item>
+    </mat-nav-list>
+  </p>
+</mat-sidenav>
+<!-- Content area -->
+<mat-sidenav-content class="inner-sidenav-content transition-2">
+  <mat-toolbar class=" mat-toolbar mat-primary mat-toolbar-single-row mat-elevation-z6" color="primary" >
+    <mat-toolbar-row>
+      <button mat-button (click)="sidenav.toggle()" class="mat-icon-button"><mat-icon class="example-icon">menu</mat-icon></button>
+      <span class="example-spacer"></span>
+      <span style="font-size: 13px; padding:5px ">Logged by SUPERADMIN</span>
+      <span class="mat-button-wrapper">
+            <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">power_settings_new</mat-icon>
+        </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
+  <mat-card-header class="mat-card-header" fxlayoutalign="center" style="align-items: stretch; flex-direction: row; box-sizing: border-box; display: flex;"><div class="mat-card-header-text">
+    <mat-card-subtitle class="mat-card-subtitle">
+      <h2>Item Details</h2>
+    </mat-card-subtitle>
+  </div>                
+
+</mat-card-header>
+<mat-card style="margin: 20px;">
+  <mat-card-content>
+    <mat-tab-group>
+      <mat-tab label="Tab 1">
+        <div class="demo-tab-content">
+          <form class="example-form">
+            <mat-grid-list [cols]="breakpoint" rowHeight="2:0.6" (window:resize)="onResize($event)">
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Vehicle Category" value="">
+                  <mat-hint align="end">BUS</mat-hint>
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Group Code" value="">
+                  <mat-hint align="end">ACCESSORIES</mat-hint>
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Sub Group Code" value="">
+                  <mat-hint align="end">ALMIRAH</mat-hint>
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Item Code" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Old Item Code" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Alternate Code 1" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Alternate Code 2" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Item Name 1" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Item Name 2" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Item Name 3" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Item Name 4" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Name on Barcode" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Item Net Wtg." value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Master Carton Wtg." value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Master Carton Net Wtg." value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Master Carton CBM" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Master Carton CFT" value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Other Reference No." value="">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Other Reference No." value="">
+                </mat-form-field>
+              </mat-grid-tile>
+            </mat-grid-list>
+            <mat-divider></mat-divider>
+
+            <mat-grid-list cols="2" rowHeight="2:1.5">
+              <mat-grid-tile>
+                <div>
+                  <mat-table class="flex-stretch" #table [dataSource]="dataSource">
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="in_inches">
+                      <mat-header-cell *matHeaderCellDef>(In Inches) </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.in_inches}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="unit_qty">
+                      <mat-header-cell *matHeaderCellDef> Unit Qty. </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.unit_qty}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="length">
+                      <mat-header-cell *matHeaderCellDef> Length </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.length}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="breadth">
+                      <mat-header-cell *matHeaderCellDef> Breadth </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.breadth}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Height Column -->
+                    <ng-container matColumnDef="height">
+                      <mat-header-cell *matHeaderCellDef> Height </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.height}} </mat-cell>
+                    </ng-container>
+
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                  </mat-table>
+                </div>
+              </mat-grid-tile>
+            </mat-grid-list>
+            <div class="button-row " style="text-align: center;">
+              <span class="example-spacer"></span>
+              <button mat-raised-button color="primary" submit value="submit">Update</button>
+              <button mat-raised-button color="warn">Close</button>
+            </div>
+          </form>
+
+        </div>
+      </mat-tab>
+      <mat-tab label="Tab 2">
+        <div class="demo-tab-content">
+          No content
+        </div>  
+      </mat-tab>
+      <mat-tab label="Tab 3">
+        <div class="demo-tab-content">
+          No content
+        </div>  
+      </mat-tab>
+      <mat-tab label="Tab 4">
+        No content  
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
+
+</mat-sidenav-content>
+</mat-sidenav-container>
